@@ -65,6 +65,15 @@ const time = {
         }
     },
 
+    // Function detik.
+    detik: function () {
+        if (this.dt.getSeconds() < 10) {
+            return "0" + this.dt.getSeconds();
+        } else {
+            return this.dt.getSeconds();
+        }
+    },
+
     // Function zona wilayah (Time zone). Jika zona sekian, maka mereturn string sekian.
     zonaWilayah: function () {
         if (this.dt.getTimezoneOffset() === -420) {
@@ -75,9 +84,14 @@ const time = {
             return "WIT";
         }
     },
+
+    sto: function () {
+        return setTimeout(this.detik(), 1000);
+    },
 };
 
 // Menampilkan semua objek function diatas ke elemen id ucapan pada dokumen HTML.
 document.getElementById("ucapan").innerHTML =
     `Selamat ${time.selamat()}! &bigstar; ${time.hari()}, ${time.tanggal()} ${time.bulan()} ${time.dt.getFullYear()}
-    &bigstar; ${time.jam()}:${time.menit()} ${time.zonaWilayah()}`;
+    &bigstar; ${time.jam()}:${time.menit()}:${time.detik()} ${time.zonaWilayah()}`;
+time.detik();
