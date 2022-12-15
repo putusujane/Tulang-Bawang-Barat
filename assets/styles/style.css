@@ -122,6 +122,7 @@ main {
 article {
     width: 73%;
     margin-top: 20px;
+    box-shadow: 0 0 3px #393E46;
 }
 
 /* Kotak shadow tiap artikel */
@@ -291,6 +292,10 @@ footer {
     color: white;
     background: linear-gradient(to left, #393E46, #6D9886);
 }
+
+.desain, .bahasaPemrograman, .mediaSosial, .hak-cipta, img {transition: 0.4s;}
+
+.desain:hover,.bahasaPemrograman:hover, .mediaSosial:hover, .hak-cipta:hover {transform: scale(118%);}
 
 .underlineFooter {
     text-decoration: underline;

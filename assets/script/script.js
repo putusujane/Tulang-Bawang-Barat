@@ -116,6 +116,39 @@ const time = {
             }
         }
     },
+
+    top: function () {
+        const keatas = document.createElement("i");
+        document.querySelector("footer").appendChild(keatas);
+        keatas.innerHTML = "<i class=\"fa-solid fa-arrow-up\"></i>";
+        keatas.setAttribute("title","Keatas");
+
+        keatas.style.display = "flex";
+        keatas.style.justifyContent = "center";
+        keatas.style.alignItems = "center";
+
+        keatas.style.cursor = "pointer";
+        keatas.style.position = "fixed";
+        keatas.style.bottom = "60px";
+        keatas.style.right = "60px";
+
+        keatas.style.fontSize = "2.5em";
+        keatas.style.color = "#6D9886";
+        keatas.style.textShadow = "0 0 3px black";
+
+        keatas.onmouseover = function () {
+            keatas.style.color = "gray";
+            document.querySelector("html").style.scrollBehavior = "smooth";
+        }
+        keatas.onmouseleave = function () {
+            keatas.style.color = "#6D9886";
+        }
+
+        keatas.onclick = function () {
+            window.scrollTo(500,0);
+        }
+        keatas.style.transition = "0.4s";
+    },
 };
 
 // Menampilkan semua objek function diatas ke elemen id ucapan pada dokumen HTML.
@@ -138,3 +171,5 @@ if (time.jam() >= "18" || time.jam() <= "06") {
     time.modeDarkClr(".brcrm","black");
     time.modeDarkBg(".brcrm", "linear-gradient(to right, #F2E7D5, #393E46)");
 }
+
+time.top();
