@@ -146,10 +146,11 @@ article section h3 {
     color: #393E46;
 }
 
-article section .fChrBig:first-letter {
+article section .fChrBig::first-letter {
     font-size: 2em;
     font-weight: bold;
-    color: #393E46;
+    color: lightgray;
+    background: linear-gradient(10deg, #393E46, #6D9886);
 }
 
 .gbr-artikel {

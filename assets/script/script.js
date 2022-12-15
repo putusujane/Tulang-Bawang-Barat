@@ -85,10 +85,6 @@ const time = {
         }
     },
 
-    sto: function () {
-        return setTimeout(this.detik(), 1000);
-    },
-
     // Function mode dark saat jam malam (jam 18 sampai 06)
     modeDarkBg: function (kueri, warna) {
         document.querySelector(kueri).style.background = warna;
@@ -108,18 +104,18 @@ const time = {
         }
     },
 
-    modeDarkSelengkapnya: function (q, c) {
-        let e = document.querySelectorAll(q);
-        for (let i = 0; i < e.length; i++) {
-            e[i].onmouseover = function () {
-                this.style.background = c;
+    modeDarkSelengkapnya: function (kueri, warna) {
+        let elemen = document.querySelectorAll(kueri);
+        for (let i = 0; i < elemen.length; i++) {
+            elemen[i].onmouseover = function () {
+                this.style.background = warna;
             }
 
-            e[i].onmouseleave = function () {
+            elemen[i].onmouseleave = function () {
                 this.style.background = "#6D9886";
             }
         }
-    }
+    },
 };
 
 // Menampilkan semua objek function diatas ke elemen id ucapan pada dokumen HTML.
@@ -133,9 +129,12 @@ if (time.jam() >= "18" || time.jam() <= "06") {
     time.modeDarkBg("header", "linear-gradient(to left, #6D9886, #393E46)");
     time.modeDarkBg("body", "#393E46");
 
-    time.modeDarkBoxShadow("aside, article, article section", "0 0 4px #F7F7F7");
+    time.modeDarkBoxShadow("aside, article, article section", "0 0 3px #F7F7F7");
 
     time.modeDarkClr("body:not(.brcrm p), p:not(.brcrm p)","#F7F7F7");
 
-    time.modeDarkSelengkapnya(".selengkapnya","gray");
+    time.modeDarkSelengkapnya(".selengkapnya","linear-gradient(to bottom, #6D9886, #393E46)");
+
+    time.modeDarkClr(".brcrm","black");
+    time.modeDarkBg(".brcrm", "linear-gradient(to right, #F2E7D5, #393E46)");
 }
