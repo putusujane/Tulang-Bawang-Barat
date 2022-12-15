@@ -88,6 +88,38 @@ const time = {
     sto: function () {
         return setTimeout(this.detik(), 1000);
     },
+
+    // Function mode dark saat jam malam (jam 18 sampai 06)
+    modeDarkBg: function (kueri, warna) {
+        document.querySelector(kueri).style.background = warna;
+    },
+
+    modeDarkClr: function (kueri, warna) {
+        let elemen = document.querySelectorAll(kueri);
+        for (let i = 0; i < elemen.length; i++) {
+            elemen[i].style.color = warna;
+        }
+    },
+
+    modeDarkBoxShadow: function (kueri, warna) {
+        let elemen = document.querySelectorAll(kueri);
+        for (let i = 0; i < elemen.length; i++) {
+            elemen[i].style.boxShadow = warna;
+        }
+    },
+
+    modeDarkSelengkapnya: function (q, c) {
+        let e = document.querySelectorAll(q);
+        for (let i = 0; i < e.length; i++) {
+            e[i].onmouseover = function () {
+                this.style.background = c;
+            }
+
+            e[i].onmouseleave = function () {
+                this.style.background = "#6D9886";
+            }
+        }
+    }
 };
 
 // Menampilkan semua objek function diatas ke elemen id ucapan pada dokumen HTML.
@@ -95,3 +127,15 @@ document.getElementById("ucapan").innerHTML =
     `Selamat ${time.selamat()}! &bigstar; ${time.hari()}, ${time.tanggal()} ${time.bulan()} ${time.dt.getFullYear()}
     &bigstar; ${time.jam()}:${time.menit()}:${time.detik()} ${time.zonaWilayah()}`;
 time.detik();
+
+// Memanggil objek fungsi mode dark
+if (time.jam() >= "18" || time.jam() <= "06") {
+    time.modeDarkBg("header", "linear-gradient(to left, #6D9886, #393E46)");
+    time.modeDarkBg("body", "#393E46");
+
+    time.modeDarkBoxShadow("aside, article, article section", "0 0 4px #F7F7F7");
+
+    time.modeDarkClr("body:not(.brcrm p), p:not(.brcrm p)","#F7F7F7");
+
+    time.modeDarkSelengkapnya(".selengkapnya","gray");
+}

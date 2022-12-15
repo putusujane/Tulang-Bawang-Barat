@@ -19,7 +19,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: #393E46;
+    background: linear-gradient(to left, #393E46, #6D9886);
     padding: 10px 15px;
 }
 
@@ -31,7 +31,7 @@ header {
 }
 
 .heading-deskripsi a:hover {
-    color: #6D9886;
+    color: #393E46;
 }
 
 /* Navigasi */
@@ -93,7 +93,7 @@ main {
 }
 
 .brcrm {
-    margin-top: 20px;
+    margin: 10px 10px 0 10px;
     padding: 1px;
     text-align: left;
     font-size: 0.9em;
@@ -121,14 +121,15 @@ main {
 /* Artikel */
 article {
     width: 73%;
+    margin-top: 20px;
 }
 
 /* Kotak shadow tiap artikel */
 article section {
-    margin: 20px 0;
+    margin: 20px 10px;
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    box-shadow: 0 0 4px #393E46;
+    box-shadow: 0 0 3px #393E46;
     overflow: hidden;
 }
 
@@ -171,7 +172,7 @@ article section .fChrBig:first-letter {
     flex-direction: row;
     align-items: center;
     width: 65%;
-    background: linear-gradient(to right, #393E46, #6D9886);
+    background: linear-gradient(to left, #393E46, #6D9886);
     transform: skew(-15deg);
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -245,7 +246,7 @@ aside {
     width: 100%;
     padding: 3px;
     margin-bottom: 8px;
-    background: linear-gradient(to bottom left, #393E46, #6D9886);
+    background: linear-gradient(to left, #393E46, #6D9886);
 }
 
 .mrgnbtm {
@@ -287,7 +288,7 @@ footer {
     padding: 15px;
     margin-top: 50px;
     color: white;
-    background-color: #393E46;
+    background: linear-gradient(to left, #393E46, #6D9886);
 }
 
 .underlineFooter {
