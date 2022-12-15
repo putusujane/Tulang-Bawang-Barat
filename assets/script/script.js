@@ -121,7 +121,7 @@ const time = {
         const t = document.createElement("i");
         document.querySelector("footer").appendChild(t);
         t.innerHTML = "<i class=\"fa-solid fa-arrow-up\"></i>";
-        t.setAttribute("title","t");
+        t.setAttribute("title","Scroll keatas");
 
         t.style.display = "flex";
         t.style.justifyContent = "center";
@@ -148,6 +148,8 @@ const time = {
             window.scrollTo(500,0);
         }
         t.style.transition = "0.4s";
+
+        t.style.zIndex = "500";
     },
 };
 
@@ -157,6 +159,8 @@ document.getElementById("ucapan").innerHTML =
     &bigstar; ${time.jam()}:${time.menit()}:${time.detik()} ${time.zonaWilayah()}`;
 time.detik();
 
+time.top();
+
 // Memanggil objek fungsi mode dark
 if (time.jam() >= "18" || time.jam() <= "06") {
     time.modeDarkBg("header", "linear-gradient(to left, #6D9886, #393E46)");
@@ -164,12 +168,10 @@ if (time.jam() >= "18" || time.jam() <= "06") {
 
     time.modeDarkBoxShadow("aside, article, article section", "0 0 3px #F7F7F7");
 
-    time.modeDarkClr("body:not(.brcrm p), p:not(.brcrm p)","#F7F7F7");
+    time.modeDarkClr("body:not(.brcrm p), p:not(.brcrm p)", "#F7F7F7");
 
-    time.modeDarkSelengkapnya(".selengkapnya","linear-gradient(to bottom, #6D9886, #393E46)");
+    time.modeDarkSelengkapnya(".selengkapnya", "linear-gradient(to bottom, #6D9886, #393E46)");
 
-    time.modeDarkClr(".brcrm","black");
+    time.modeDarkClr(".brcrm", "black");
     time.modeDarkBg(".brcrm", "linear-gradient(to right, #F2E7D5, #393E46)");
 }
-
-time.top();
