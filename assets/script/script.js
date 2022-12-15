@@ -118,36 +118,36 @@ const time = {
     },
 
     top: function () {
-        const keatas = document.createElement("i");
-        document.querySelector("footer").appendChild(keatas);
-        keatas.innerHTML = "<i class=\"fa-solid fa-arrow-up\"></i>";
-        keatas.setAttribute("title","Keatas");
+        const t = document.createElement("i");
+        document.querySelector("footer").appendChild(t);
+        t.innerHTML = "<i class=\"fa-solid fa-arrow-up\"></i>";
+        t.setAttribute("title","t");
 
-        keatas.style.display = "flex";
-        keatas.style.justifyContent = "center";
-        keatas.style.alignItems = "center";
+        t.style.display = "flex";
+        t.style.justifyContent = "center";
+        t.style.alignItems = "center";
 
-        keatas.style.cursor = "pointer";
-        keatas.style.position = "fixed";
-        keatas.style.bottom = "60px";
-        keatas.style.right = "60px";
+        t.style.cursor = "pointer";
+        t.style.position = "fixed";
+        t.style.bottom = "60px";
+        t.style.right = "60px";
 
-        keatas.style.fontSize = "2.5em";
-        keatas.style.color = "#6D9886";
-        keatas.style.textShadow = "0 0 3px black";
+        t.style.fontSize = "2.5em";
+        t.style.color = "#6D9886";
+        t.style.textShadow = "0 0 3px black";
 
-        keatas.onmouseover = function () {
-            keatas.style.color = "gray";
+        t.onmouseover = function () {
+            t.style.color = "gray";
             document.querySelector("html").style.scrollBehavior = "smooth";
         }
-        keatas.onmouseleave = function () {
-            keatas.style.color = "#6D9886";
+        t.onmouseleave = function () {
+            t.style.color = "#6D9886";
         }
 
-        keatas.onclick = function () {
+        t.onclick = function () {
             window.scrollTo(500,0);
         }
-        keatas.style.transition = "0.4s";
+        t.style.transition = "0.4s";
     },
 };
 
