@@ -159,7 +159,6 @@ const time = {
 document.getElementById("ucapan").innerHTML =
     `Selamat ${time.selamat()}! &bigstar; ${time.hari()}, ${time.tanggal()} ${time.bulan()} ${time.dt.getFullYear()}
     &bigstar; ${time.jam()}:${time.menit()}:${time.detik()} ${time.zonaWilayah()}`;
-time.detik();
 
 time.top();
 
@@ -176,4 +175,14 @@ if (time.jam() >= "18" || time.jam() <= "06") {
 
     time.modeDarkClr(".brcrm", "black");
     time.modeDarkBg(".brcrm", "linear-gradient(to right, #F2E7D5, #393E46)");
+}
+
+let brcrm = document.querySelectorAll(".brcrm a");
+for (let i = 0; i < brcrm.length; i++) {
+    brcrm[0].setAttribute("href", "/");
+    brcrm[0].setAttribute("title", document.querySelectorAll(".heading-deskripsi a")[0].innerText);
+
+    brcrm[1].setAttribute("href", document.URL);
+    brcrm[1].setAttribute("title", document.title.slice(0,-22));
+    brcrm[1].innerText = document.title.slice(0, -22);
 }
