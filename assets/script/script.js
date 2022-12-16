@@ -164,12 +164,12 @@ time.top();
 
 // Memanggil objek fungsi mode dark
 if (time.jam() >= "18" || time.jam() <= "06") {
-    time.modeDarkBg("header", "linear-gradient(to left, #6D9886, #393E46)");
+    time.modeDarkBg("header", "linear-gradient(to left, #393E46, #6D9886)");
     time.modeDarkBg("body", "#393E46");
 
-    time.modeDarkBoxShadow("aside, article, article section", "0 0 3px #F7F7F7");
+    time.modeDarkBoxShadow("aside, article, article section", "0 0 2px rgba(247,247,247,0.8)");
 
-    time.modeDarkClr("body:not(.brcrm p), p:not(.brcrm p)", "#F7F7F7");
+    time.modeDarkClr("body:not(.brcrm p), p:not(.brcrm p)", "rgba(247,247,247,1)");
 
     time.modeDarkSelengkapnya(".selengkapnya", "linear-gradient(to bottom, #6D9886, #393E46)");
 
@@ -182,7 +182,7 @@ for (let i = 0; i < brcrm.length; i++) {
     brcrm[0].setAttribute("href", "/");
     brcrm[0].setAttribute("title", document.querySelectorAll(".heading-deskripsi a")[0].innerText);
 
-    brcrm[1].setAttribute("href", document.URL);
+    brcrm[1].setAttribute("href", location.pathname);
     brcrm[1].setAttribute("title", document.title.slice(0,-22));
     brcrm[1].innerText = document.title.slice(0, -22);
 }
