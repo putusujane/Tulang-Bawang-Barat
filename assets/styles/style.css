@@ -9,6 +9,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Body */
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    border-left: 1px solid #393E46;
+    border-right: 1px solid #393E46;
+}
+
 /* Header */
 header {
     display: flex;
@@ -19,7 +27,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: linear-gradient(to left, #393E46, #6D9886);
+    background: linear-gradient(to top left, #393E46, #393E46, #6D9886);
     padding: 10px 15px;
 }
 
@@ -93,7 +101,7 @@ main {
 }
 
 .brcrm {
-    margin: 10px 10px 0 10px;
+    margin: 5px 10px 0 10px;
     padding: 1px;
     text-align: left;
     font-size: 0.9em;
@@ -182,7 +190,7 @@ article section .fChrBig::first-letter {
 }
 
 .bgh2:hover {
-    box-shadow: 6px 4px 3px #393E46;
+    box-shadow: 5px 3px 3px #393E46;
 }
 
 .bgh2 i {
@@ -246,7 +254,7 @@ aside {
     vertical-align: middle;
     gap: 6px;
     width: 100%;
-    padding: 3px;
+    padding: 10px;
     margin-bottom: 8px;
     background: linear-gradient(to left, #393E46, #6D9886);
 }
@@ -288,9 +296,9 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     padding: 15px;
-    margin-top: 50px;
+    margin: 50px 0 0 0;
     color: white;
-    background: linear-gradient(to left, #393E46, #6D9886);
+    background: linear-gradient(to left, #393E46, #6D9886, #393E46);
 }
 
 .desain, .bahasaPemrograman, .mediaSosial, .hak-cipta, img {transition: 0.4s;}

@@ -82,6 +82,8 @@ const time = {
             return "WITA";
         } else if (this.dt.getTimezoneOffset() === -540) {
             return "WIT";
+        } else {
+            return null;
         }
     },
 
