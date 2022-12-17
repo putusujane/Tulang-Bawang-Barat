@@ -41,6 +41,7 @@ header {
 
 .heading-deskripsi a:hover {
     color: #393E46;
+    text-shadow: 1px 1px 5px #F7F7F7;
 }
 
 /* Navigasi */
@@ -61,7 +62,7 @@ nav a {
     display: inline-block;
     padding: 5px 10px;
     text-transform: uppercase;
-    /*font-size: large;*/
+    font-weight: bold;
     text-decoration: none;
     text-align: center;
     color: #F7F7F7;
@@ -91,6 +92,34 @@ nav i {
     color: #F7F7F7;
 }
 
+/* Galeri */
+#galeri {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+
+    margin: 15px 15px 0 15px;
+}
+
+#galeri img {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1px;
+    height: 250px;
+    /*aspect-ratio: auto;*/
+    width: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#galeri img:hover {
+    opacity: 0.6;
+}
+
+
 /* Main */
 main {
     display: flex;
@@ -108,7 +137,7 @@ main {
     font-size: 0.9em;
     vertical-align: middle;
     color: #393E46;
-    background-color: #F2E7D5;
+    background-color: rgba(242, 231, 213, 0.1);
 }
 
 .brcrm a {
@@ -171,6 +200,10 @@ article section .fChrBig::first-letter {
 
 .gbr-artikel img {
     max-width: 90%;
+}
+
+.gbr-artikel img:hover, aside img:hover {
+    transform: scale(103%);
 }
 
 .sembunyi {
@@ -253,7 +286,8 @@ aside {
     justify-content: center;
     align-items: center;
     vertical-align: middle;
-    gap: 6px;
+    align-content: center;
+    gap: 8px;
     width: 100%;
     padding: 10px;
     margin-bottom: 8px;
@@ -265,14 +299,14 @@ aside {
 }
 
 .bgh3 i {
-    font-size: 1em;
+    font-size: 1.3em;
     color: #F7F7F7;
 }
 
 .bgh3 h3 {
     text-transform: uppercase;
-    font-size: 1.1em;
-    font-weight: normal;
+    font-size: 1.3em;
+    font-weight: bold;
     color: #F7F7F7;
 }
 
@@ -440,7 +474,7 @@ footer {
     .tabel-none {display: block;}
 
     header {
-        padding: 0;
+        padding: 10px 0 0 0;
         overflow: hidden;
         position: static;
     }
@@ -525,7 +559,7 @@ footer {
 
     .heading-deskripsi p {font-size: 0.8em;}
 
-    #ucapan {font-size: 0.7em;}
+    #ucapan {font-size: 0.8em;}
 
     .bgh2 h2 {font-size: 1.3em;}
 
@@ -536,4 +570,10 @@ footer {
 
 @media screen and (max-width: 320px) {
     #tgl {display: inline-block;}
+}
+
+@media screen and (max-width: 1440px) {
+    body {
+        border: none;
+    }
 }

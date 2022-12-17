@@ -139,7 +139,7 @@ const time = {
         t.style.textShadow = "0 0 3px black";
 
         t.onmouseover = function () {
-            t.style.color = "gray";
+            t.style.color = "#F7F7F7";
             document.querySelector("html").style.scrollBehavior = "smooth";
         }
         t.onmouseleave = function () {
@@ -173,8 +173,8 @@ if (time.jam() >= "18" || time.jam() <= "06") {
 
     time.modeDarkSelengkapnya(".selengkapnya", "linear-gradient(to bottom, #6D9886, #393E46)");
 
-    time.modeDarkClr(".brcrm", "black");
-    time.modeDarkBg(".brcrm", "linear-gradient(to right, #F2E7D5, #393E46)");
+    time.modeDarkClr(".brcrm", "#F7F7F7");
+    // time.modeDarkBg(".brcrm", "linear-gradient(to right, #F2E7D5, #393E46)");
 }
 
 let brcrm = document.querySelectorAll(".brcrm a");
