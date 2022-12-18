@@ -96,10 +96,10 @@ nav i {
 #galeri {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    overflow: auto;
+    overflow: hidden;
 
     margin: 15px 15px 0 15px;
 }
@@ -108,15 +108,31 @@ nav i {
     margin-left: auto;
     margin-right: auto;
     padding: 1px;
-    height: 250px;
+    height: 450px;
     /*aspect-ratio: auto;*/
-    width: 50%;
+    width: 100%;
     object-fit: cover;
     object-position: center;
+    -o-object-fit: cover;
 }
 
 #galeri img:hover {
     opacity: 0.6;
+}
+
+#panahKiri, #panahKanan {
+    position: relative;
+    cursor: pointer;
+    z-index: 200;
+    width: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#panahKiri {
+}
+
+#panahKanan {
 }
 
 
